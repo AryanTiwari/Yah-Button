@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Button } from 'antd';
 
 class App extends Component {
+
+// State of playing sound and gif
+  state = {
+    playing: false
+  }
+
+// Function to play sound and gif
+  playSound() {
+    return (
+      <div>
+        <video controls autoplay loop>
+            <source 
+            src={require('./media/vid.mp4')}
+            type="video/mp4" 
+            />
+        </video>
+      </div>
+    )
+  }
+
+// Rendering
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1> Yah </h1> 
+        <Button type="primary" onClick={() => this.setState({ playing: true })}> Yah </Button>
+        {this.state.playing && this.playSound()}
       </div>
     );
   }
