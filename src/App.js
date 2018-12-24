@@ -4,12 +4,12 @@ import { Button } from 'antd';
 
 class App extends Component {
 
-// State of playing sound and gif
+// State of playing video
   state = {
     playing: false
   }
 
-// Function to play sound and gif
+// Function to play video
   playSound() {
     return (
       <div>
