@@ -13,11 +13,8 @@ class App extends Component {
   playSound() {
     return (
       <div>
-        <video controls autoplay loop>
-            <source 
-            src={require('./media/vid.mp4')}
-            type="video/mp4" 
-            />
+        <video src={require('./media/vid.mp4')} autoplay="autoplay" loop="loop" >
+          <source src="./media/vid.mp4" type="video/mp4" />
         </video>
       </div>
     )
